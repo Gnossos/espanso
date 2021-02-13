@@ -1,0 +1,31 @@
+# excerpt - Excerpt note for Zettelkasten/zettlr
+name: zexcerpt
+parent: zettlr
+
+  # Excerpt
+matches:
+  - triggers: [":zexcerpt", ":exc", ":Excerpt"]
+    force_clipboard: true
+    replace: |
+             ---
+             title: {{Excerpt_form.topic}} (Excerpt)
+             source-title: {{Excerpt_form.source}}
+             author: 
+                 name: {{Excerpt_form.author}}
+             note-type: Excerpt
+             creation-date: {{datetime}}
+             filename: {{datetime}} {{Excerpt_form.topic}} (Excerpt)
+             date: < publication date >
+             page(s): < page(s) >
+             nocite: < citation to source >
+             reference-section-title: Sources {-}
+             keywords:
+               - excerpt singlewords
+               - multiple words with spaces
+             ...
+             ## Excerpt {-}
+             < excerpt from publication goes here >
+             {{nl}}
+             ## Source {-}
+             [[< link to literature note goes here >]]
+             {{nl}}

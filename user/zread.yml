@@ -1,0 +1,38 @@
+# zread - Template for literature to read for Zettelkasten & zettlr
+name: zread
+parent: zettlr
+
+  ## I can't get the form working properly. So for now leave the topic as a manual insertion.
+matches:
+  - triggers: [":zread!", ":Read!"]
+    force_clipboard: true
+    replace: |
+             ---
+             title: {{T_form.title}} (To Read!)
+             author: 
+                 name: {{myName}}
+             note-type: Literature
+             creation-date: {{datetime}}
+             filename: {{datetime}} {{T_form.title}}
+             keywords:
+               - hub singlewords
+               - multiple words with spaces
+             ...
+             List of items to read, with links to their bibliography notes. They may be organized with headings and subheadings.
+             {{nl}}
+             ## Heading 1
+             > [[]]
+             > [[]]
+             {{nl}}
+             ## Heading 2
+             > [[]]
+             > [[]]
+             {{nl}}
+             ### Subheading 1
+             >> [[]]
+             >> [[]]
+             {{nl}}
+             ### Subheading 2
+             >> [[]]
+             {{nl}}
+

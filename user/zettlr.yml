@@ -1,0 +1,32 @@
+# zettlr.yml - Implement various Zettelkasten note types.
+
+# See https://medium.com/@rebeccawilliams9941/the-zettelkasten-method-examples-to-help-you-get-started-8f8a44fa9ae6 and https://org-roam.discourse.group/t/the-case-for-custom-link-types/209
+# about Zettelkasten note types. The two articles are not consistent in terminology or approach, but together they're pretty comprehensive.
+
+name: zettlr
+parent: default
+filter_title: "zettlr"
+
+matches:
+ # Zettelkasten
+
+ # Generic YAML Frontmatter variables (see https://docs.zettlr.com/en/core/yaml-frontmatter/#frontmatter-variables)
+  - trigger: ":yaml"
+    force_clipboard: true
+    replace: |
+             ---
+             title: yaml template
+             author:
+               - name: {{myName}}
+                   affiliation: {{myAffiliation}}
+             keywords:
+               - singleword
+               - multiple words with spaces
+             lang: en-US
+             nocite: <citation keys>
+             reference-section-title: References
+             notes-after-punctuation:
+             ...
+
+...
+

@@ -1,0 +1,110 @@
+# espanso configuration file
+
+# This is the default configuration file, change it as you like it
+# You can refer to the official documentation:
+# https://espanso.org/docs/
+
+# Matches are the substitution rules, when you type the "trigger" string
+# it gets replaced by the "replace" string.
+matches:
+  # Dates (mmddyyyy)
+  - trigger: ":date"
+    replace: "{{mydate}}"
+    vars:
+      - name: mydate
+        type: date
+        params:
+          format: "%m/%d/%Y"
+
+  # Shell commands
+  - trigger: ":shell"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: shell
+        params:
+          cmd: "echo Hello from your shell"
+
+  # Utilities
+  - trigger: ":nl"
+    replace: "\n"
+
+# Utilities (Global vars)
+global_vars:
+  - name: "myFormalName"
+    type: "dummy"
+    params:
+      echo: "Marshall M. A. Feldman"
+  - name: "myName"
+    type: "dummy"
+    params:
+      echo: "Marshall Feldman"
+  - name: "myAffiliation"
+    type: "dummy"
+    params:
+      echo: "The University of Rhode Island"
+  - name: "datetime"
+    type: "date"
+    params:
+      format: "%Y%m%d%H%M%S"
+  - name: nl
+    type: match
+    params:
+      trigger: ":nl"
+
+  # Title, Author, Affiliation form
+  - name: TAA_form
+    type: form
+    params:
+      layout: |
+              Title: {{title}}
+              Author: {{author}}
+              Affiliation: {{affiliation}}
+      fields:
+        title:
+          multiline: true
+        author:
+          default: Marshall Feldman     
+        affiliation:
+          default: The University of Rhode Island
+
+  # Title & Author form
+  - name: TA_form
+    type: form
+    params:
+      layout: |
+              Title: {{title}}
+              Author: {{author}}
+      fields:
+        title:
+          multiline: true
+        author:
+          default: Marshall Feldman     
+
+  # Title/Topic form
+  - name: T_form
+    type: form
+    params:
+      layout: |
+              Title or topic: {{title}}
+      fields:
+        title:
+          multiline: true
+
+# Excerpt form
+  - name: Excerpt_form
+    type: form
+    params:
+      layout: |
+              Topic: {{topic}}
+              Source title: {{source}}
+              Author: {{author}}
+      fields:
+        topic:
+          multiline: true
+        source:
+          multiline: true
+        author:
+          default: Marshall Feldman     
+        affiliation:
+          default: The University of Rhode Island

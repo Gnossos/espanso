@@ -1,0 +1,38 @@
+# zproject - Project note template for Zettelkasten & zettlr
+name: zproject
+parent: zettlr
+
+matches:
+  - triggers: [":zproject", ":Project"]
+    force_clipboard: true
+    replace: |
+             ---
+             title: {{T_form.title}} (Project)
+             author: 
+                 name: {{myName}}
+             note-type: Project
+             filename: {{datetime}} {{T_form.title}} (Project)
+             creation-date: {{datetime}}
+             keywords:
+               - project singlewords
+               - multiple words with spaces
+             ...
+             Project notes organize notes about project, e.g. for an article. Can be multi-level, with
+             headings and subheadings.
+             {{nl}}
+             ## Heading 1
+             > [[]]
+             > [[]]
+             {{nl}}
+             ## Heading 2
+             > [[]]
+             > [[]]
+             {{nl}}
+             ### Subheading 1
+             >> [[]]
+             >> [[]]
+             {{nl}}
+             ### Subheading 2
+             >> [[]]
+             {{nl}}
+

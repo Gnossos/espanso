@@ -1,0 +1,25 @@
+# zfleeting - Zettelkasten fleeting/temporary note template for zettlr/Zettelkasten
+name: zfleeting
+parent: zettlr
+
+  # Fleeting Note, AKA temporary note
+matches:
+  - triggers: [ ":zfleet", ":Fleeting", ":temp", ":tmp" ]
+    force_clipboard: true
+    replace: |
+             ---
+             title: "{{TA_form.title}}"
+             author: 
+                 name: "{{TA_form.author}}"
+             note-type: Fleeting
+             filename: "{{datetime}} {{TA_form.title}}"
+             creation-date: {{datetime}}
+             keywords:
+               - excerpt singlewords
+               - multiple words with spaces
+             ...
+             {{nl}}
+             Fleeting notes are temporary reminders of ideas. See [Rebecca Williams' "The Zettelkasten Method: Examples to help you get started."](https://medium.com/@rebeccawilliams9941/the-zettelkasten-method-examples-to-help-you-get-started-8f8a44fa9ae6). **Enter note text here.**
+             {{nl}}
+             ## Sources
+

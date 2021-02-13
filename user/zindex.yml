@@ -1,0 +1,40 @@
+# zindex - Index/Reference note template for Zettelkasten & zettlr
+name: zindex
+parent: zettlr
+
+  ## I can't get the form working properly. So for now leave the topic as a manual insertion.
+matches:
+  - triggers: [":zindex", ":Index"]
+    force_clipboard: true
+# The title line below should be "title: {{T_form.topic}} (Index)" if the form input were working.
+    replace: |
+             ---
+             title: {{T_form.title}} (Index)
+             author: 
+             filename: {{datetime}} {{T_form.title}}
+                 name: {{myName}}
+             note-type: Index
+             creation-date: {{datetime}}
+             keywords:
+               - index singlewords
+               - multiple words with spaces
+             ...
+             Index (aka Reference) notes organize notes into a specific order, e.g. for an article. Can be multi-level, with
+             headings and subheadings.
+             {{nl}}
+             ## Heading 1 {-}
+             > [[]]
+             > [[]]
+             {{nl}}
+             ## Heading 2 {-}
+             > [[]]
+             > [[]]
+             {{nl}}
+             ### Subheading 1 {-}
+             >> [[]]
+             >> [[]]
+             {{nl}}
+             ### Subheading 2 {-}
+             >> [[]]
+             {{nl}}
+

@@ -1,0 +1,55 @@
+# zhub - Hub template for Zettelkasten & zettlr
+name: zhub
+parent: zettlr
+
+matches:
+  - triggers: [":hub", ":zhub", ":Structure"]
+    force_clipboard: true
+# Perhaps CSS will allow autmated right-alignment and dotted leaders for the individual entries.
+    replace: |
+             ---
+             title: {{T_form.title}} (Hub)
+             author: 
+                 name: {{myName}}
+             note-type: Hub
+             creation-date: {{datetime}}
+             filename: {{datetime}} {{T_form.title}} (Hub)
+             keywords:
+               - hub note
+               - structure note
+             ...
+
+             Hub notes, also known as structure notes, combine links to the most important notes dealing with a specific topic.[^hub]
+             More complex hub notes typically are organized under headings and subheadings.
+             See [Code snippets in ZK](https://forum.zettelkasten.de/discussion/983/code-snippets-in-zk) for a good example of a hub note for R.
+
+             There are two common formats, hiearchical (or nested list) and sequential. 
+
+             # Hierarchical
+
+             The hiearchical format typically has descriptions followed by links, although sometimes it begins with the link followed by the description.
+
+             ## Heading 1 {-}
+             > Description 1.....................................................................[[]]
+             > Description 2.................................................................... [[]]
+
+             ## Heading 2 {-}
+             > Description 3.....................................................................[[]]
+             > Description 4.....................................................................[[]]
+
+             ### Subheading 1 {-}
+             >>  Description 5...................................................................[[]]
+             >>  Description 6...................................................................[[]]
+
+             ### Subheading 2 {-}
+             >> Description 7....................................................................[[]]
+
+             # Sequential
+
+             Sequential format typically has text describing a logical, causal, or other kind of sequence. The links begin with the start of the sequence [[]], then describe the next
+             element in the chain [[]], and continue down the line [[]].
+
+             #### Notes
+
+             [^hub]: Sascha [-@saschaIntroductionZettelkastenMethod: 21-25].
+              

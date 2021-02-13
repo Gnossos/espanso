@@ -1,0 +1,31 @@
+# znote - Zettelkasten permanent note template for zettlr/Zettelkasten
+name: znote
+parent: zettlr
+
+  # Permanent Note, AKA "Note"
+matches:
+  - triggers: [":znote", ":Zettel", ":Note", ":Permanent"]
+    force_clipboard: true
+    replace: |
+             ---
+             title: {{T_form.title}} (Permanent)
+             author: 
+                 name: {{myName}}
+             note-type: Permanent
+             creation-date: {{datetime}}
+             filename: {{datetime}} {{T_form.title}} (Permanent)
+             keywords:
+               - excerpt singlewords
+               - multiple words with spaces
+             ...
+
+             ## Related Notes {-}
+             [[]]
+
+             ## Note(s) {-}
+             Permanent notes may be inspired by a source, but they are your own ideas. Permanent notes may have multiple connections to an indivdiual source and connect to multiple sources. See Rebecca Williams' ["The Zettelkasten Method: Examples to help you get started."](https://medium.com/@rebeccawilliams9941/the-zettelkasten-method-examples-to-help-you-get-started-8f8a44fa9ae6)
+
+             *Enter note text here.*
+
+             ## Sources {-}
+

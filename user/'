@@ -1,0 +1,29 @@
+# zlit - Notes from literature for Zettelkasten/zettlr
+name: zlit
+parent: zettlr
+
+  # Excerpt
+matches:
+  - triggers: [":zlit", ":literature"]
+    force_clipboard: true
+    replace: |
+             ---
+             note-type: Literature
+             creation-date: {{datetime}}
+             title: <source title>
+             author: <source author>
+             date: <publication date>
+             page(s): <page(s)>
+             nocite: <citation to source>
+             reference-section-title: Sources {-}
+             keywords:
+               - excerpt singlewords
+               - multiple words with spaces
+             ...
+             ## Literature Notes {-}
+             Notes on all or part of a source. See [Regecca Williams' "The Zettelkastem Method: Examples to help you get started."](https://medium.com/@rebeccawilliams9941/the-zettelkasten-method-examples-to-help-you-get-started-8f8a44fa9ae6).
+             {{nl}}
+
+             ## Source {-}
+             [[<link to source note goes here>]]
+             {{nl}}
