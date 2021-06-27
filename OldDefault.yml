@@ -7,12 +7,6 @@
 # Turn off SecureInput notifications
 secure_input_notification: false
 
-# The espanso documentation at Getting Started >
-#      Creating your own Match (https://espanso.org/docs/get-started/#creating-your-own-match)>
-#           macOS remarks
-#     warns that macOS text replacement with iCloud sync enabled may cause conflicts with
-#     espanso triggers and suggests starting espanso triggers with / instead of :.  
-
 # Matches are the substitution rules, when you type the "trigger" string
 # it gets replaced by the "replace" string.
 matches:
@@ -38,7 +32,7 @@ matches:
   - trigger: ":nl"
     replace: "\n"
 
-# Utilities (Global vars, including forms)
+# Utilities (Global vars)
 global_vars:
   - name: "myFormalName"
     type: "dummy"
@@ -73,9 +67,9 @@ global_vars:
         title:
           multiline: true
         author:
-          default: {{Marshall}}
+          default: Marshall Feldman     
         affiliation:
-          default: {{URI}}
+          default: The University of Rhode Island
 
   # Title & Author form
   - name: TA_form
@@ -88,7 +82,7 @@ global_vars:
         title:
           multiline: true
         author:
-          default: {{myName}}
+          default: Marshall Feldman     
 
   # Title/Topic form
   - name: T_form
@@ -100,7 +94,7 @@ global_vars:
         title:
           multiline: true
 
- # Excerpt form
+# Excerpt form
   - name: Excerpt_form
     type: form
     params:
@@ -114,6 +108,6 @@ global_vars:
         source:
           multiline: true
         author:
-          default: {{myName}}
+          default: Marshall Feldman     
         affiliation:
-          default: {{myAffiliation}}
+          default: The University of Rhode Island

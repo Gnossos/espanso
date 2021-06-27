@@ -3,7 +3,7 @@ name: zproject
 parent: zettlr
 
 matches:
-  - triggers: [":zproject", ":Project"]
+  - triggers: [";zproject", ";Project"]
     force_clipboard: true
     replace: |
              ---
@@ -17,22 +17,23 @@ matches:
                - project singlewords
                - multiple words with spaces
              ...
+             # Project: {{T_form.title}}{-}  
              Project notes organize notes about project, e.g. for an article. Can be multi-level, with
-             headings and subheadings.
+             headings and subheadings. The double brackets are for internal links.
              {{nl}}
-             ## Heading 1
-             > [[]]
-             > [[]]
-             {{nl}}
-             ## Heading 2
-             > [[]]
-             > [[]]
-             {{nl}}
-             ### Subheading 1
+             ## Heading 1  
+             > [[]]  
+             > [[]]  
+             {{nl}}  
+             ## Heading 2  
+             > [[]]  
+             > [[]]  
+             {{nl}}  
+             ### Subheading 1  
              >> [[]]
-             >> [[]]
-             {{nl}}
-             ### Subheading 2
-             >> [[]]
-             {{nl}}
+             >> [[]]  
+             {{nl}}  
+             ### Subheading 2  
+             >> [[]]  
+             {{nl}}  
 

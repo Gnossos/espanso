@@ -7,22 +7,26 @@ matches:
   - triggers: [":zmenu", ":Menu", ":zhelp", ":help", ":?"]
     force_clipboard: true
     replace: |
-             ### Zettelkasten Note/Template Menu
+             ### Zettelkasten Note/Template Menu {-}
 
-             :zbib, :bib, :source                           Separate notes for individual sources. Contain source metadata.
-             :zexcerpt, :exc, Excerpt                   Excerpt from a source
-             :zfleet, :Fleeting, :temp, :tmp          Fleeting (or Temporary) note
-             :zhub, :hub, :Structure                    Hub note (organizes notes on a topic by subtopics). Can be multi-level.[^hub]
-             :zindex, :Index                                Index or reference note (organizes notes into a specific order, e.g. for an article)
-             :zlit, :Literature                               Literature note about a source
-             :zmenu, :Menu, :zhelp, :help, :?      This menu
-             :znote, :Zettel, :Note, :Permanent  Standard zettel (permanent note)
-             :zoutline, :Outline                          Orders specific issues into an outline
-             :zproject, :Project                           Project note -- organized links to notes about a project
-             :zread!, :Read!                           A list of items to read. May be organized by subtopics.
-             :ztags, :Keywords, :Tags                 Collection of tags in alphabetical order and their associated notes 
+             :zbib, :bib, :source                            Separate notes for individual sources. Contain source  
+                                                             metadata.  
+             :zexcerpt, :exc, Excerpt                    Excerpt from a source  
+             :zfleet, :Fleeting, :temp, :tmp           Fleeting (or Temporary) note  
+             :zhub, :hub, :Structure                      Hub note (organizes notes on a topic by subtopics).  
+                                                            Can be multi-level.[^hub]  
+             :zindex, :Index                                   Index or reference note (organizes notes into a specific  
+                                                            order, e.g., for an article)  
+             :zlit, :Literature                                 Literature note about a source  
+             :zmenu, :Menu, :zhelp, :help, :?        This menu  
+             :znote, :Zettel, :Note, :Permanent    Standard zettel (permanent note)  
+             :zoutline, :Outline                            Order specific issues into an outline  
+             :zproject, :Project                             Project note -- organized links to notes about a project  
+             :zread!, :Read!                                   A list of items to read. May be organized by subtopics.  
+             :ztags, :Keywords, :Tags                   Collection of tags in alphabetical order and their  
+                                                           associated notes  
 
              #### Notes
 
-             [^hub]: Sascha [-@saschaIntroductionZettelkastenMethod: 21-25].
-              
+             [^hub]: Sascha [-@saschaIntroductionZettelkastenMethod: 21-25].  
+             

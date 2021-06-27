@@ -1,0 +1,32 @@
+# ztest - Template test for developin Zettelkasten & zettlr
+name: ztest
+parent: zettlr
+
+  # Zettelkasten test
+
+ # Title, Author, Affiliation form
+  - name: TAA_test_form
+    type: form
+    params:
+      layout: |
+              Title: {{title}}
+              Author: {{author}}
+              Affiliation: {{affiliation}}
+      fields:
+        title:
+          multiline: true
+        author:
+          default: {{Marshall}}
+        affiliation:
+          default: {{URI}}
+
+matches:
+  - triggers: [":ztest" ]
+    force_clipboard: true
+    replace: |
+             ---
+             title: {{TAA_test_form.title}} 
+             author:
+               name: {{TAA_test_form.author}}
+               affiliation: {{TAA_test_form.affiliation}}
+

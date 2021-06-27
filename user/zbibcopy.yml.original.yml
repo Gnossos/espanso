@@ -1,0 +1,48 @@
+# :zbib - Bibliography note template for Zettelkasten & zettlr
+name: zbib_Copy
+parent: zettlr
+
+# Bibliography Note
+matches:
+  - triggers: [":xzbib", ":xbib", ":xsource"]
+    force_clipboard: true
+    replace: |
+             ---  
+             title: {{TA_form.title}}  
+#             author:  
+#                 name: {{TAA_form.author}}  
+#                 affiliation: {{TAA_form.affiliation}}  
+#             note-type: Source  
+#             creation-date: {{datetime}}  
+#             filename: {{datetime}} {{TAA_form.title}} (Source)  
+#             nocite: <citation to source>  
+#             keywords:  
+#               - singlewords  
+#               - multiple words with spaces  
+#             ...
+#             ## Related Notes {-}  
+#             [[]]  
+#             # {{TAA_form.title}} {-}  
+#             ## Metadata {-}  
+#             Type:  
+#             Author(s):  
+#                 name: {{TAA_form.author}}  
+#                 affiliation: {{TAA_form.affiliation}}  
+#             Date:  
+#             Publication:  
+#             Pages:   
+#             Date added: {{datetime}}   
+#             Cite key:  
+#             PDF Attachments:  
+#             {{nl}}  
+#             # {{TAA_form.title}}  
+#             ## Abstract  
+#             Abstract text goes here.  
+#             {{nl}}  
+             ## Contents (Outline)  
+             ## Chapter 1  
+             ## Chapter 2  
+#            {{nl}}  
+             ## References  
+               
+             # Cited by Source(s) {-}  
